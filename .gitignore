@@ -1,3 +1,6 @@
+.DS_Store
+xcuserdata
+
 # Gradle files
 .gradle/
 build/
