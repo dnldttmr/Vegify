@@ -16,13 +16,13 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import de.lovessushi.vegify.domain.usecases.GetFoodFactUseCase
+import de.lovessushi.vegify.domain.usecases.GetFoodFactWithBarcodeUseCase
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {
 
-    private val getFoodFactUseCase: GetFoodFactUseCase by inject()
+    private val getFoodFactWithBarcodeUseCase: GetFoodFactWithBarcodeUseCase by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
                     LaunchedEffect(true) {
                         scope.launch {
                             text = try {
-                                getFoodFactUseCase.execute("9006900014858")
+                                getFoodFactWithBarcodeUseCase.execute("9006900014858")
                             } catch (e: Exception) {
                                 e.localizedMessage ?: "error"
                             }
