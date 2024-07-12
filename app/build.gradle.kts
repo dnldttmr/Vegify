@@ -64,6 +64,8 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.gson)
+    implementation(libs.converter.gson)
     annotationProcessor(libs.androidx.room.compiler)
 
     kapt(libs.androidx.room.compiler)
