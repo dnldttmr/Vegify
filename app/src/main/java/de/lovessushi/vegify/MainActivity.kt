@@ -18,7 +18,7 @@ import de.lovessushi.vegify.domain.navigation.NavigationItem.SCAN
 import de.lovessushi.vegify.ui.composables.AppNavigationBar
 import de.lovessushi.vegify.ui.screens.discover.DiscoverScreen
 import de.lovessushi.vegify.ui.screens.history.HistoryScreen
-import de.lovessushi.vegify.ui.screens.scan.ScanScreen
+import de.lovessushi.vegify.ui.screens.search.SearchScreen
 import de.lovessushi.vegify.ui.theme.VegifyTheme
 
 @AndroidEntryPoint
@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
                         startDestination = SCAN.label
                     ) {
                         composable(HOME.label) { DiscoverScreen() }
-                        composable(SCAN.label) { ScanScreen() }
+                        composable(SCAN.label) { SearchScreen() }
                         composable(HISTORY.label) { HistoryScreen() }
                     }
                 }

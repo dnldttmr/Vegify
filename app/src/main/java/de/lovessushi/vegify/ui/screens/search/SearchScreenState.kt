@@ -1,9 +1,8 @@
-package de.lovessushi.vegify.ui.screens.scan
+package de.lovessushi.vegify.ui.screens.search
 
 import de.lovessushi.vegify.domain.models.Product
 
-data class ScanState(
-    val isLoading: Boolean = false,
+data class SearchScreenState(
     val product: Product? = null,
     val error: Exception? = null
 )

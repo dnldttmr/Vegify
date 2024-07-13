@@ -21,7 +21,9 @@ class ProductRepositoryImpl @Inject constructor(
 ) : ProductRepository {
 
     override suspend fun getProduct(code: String): Product? {
-        val product = if (appCacheManager.get(code) != null) {
+        val disableCaching = true
+
+        val product = if (appCacheManager.get(code) != null && !disableCaching) {
             Gson().fromJson(appCacheManager.get(code), Product::class.java)
         } else {
             val response = openFoodFactsApi.getProduct(code)

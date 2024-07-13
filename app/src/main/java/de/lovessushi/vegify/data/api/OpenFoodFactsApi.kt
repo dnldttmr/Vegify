@@ -8,6 +8,6 @@ interface OpenFoodFactsApi {
 
     //TODO: add Response<ProductItem> as return type and handle HTTP Errors
     //https://world.openfoodfacts.org/files/api-documentation.html
-    @GET("v0/products/{code}.json")
+    @GET("v2/products/{code}.json")
     suspend fun getProduct(@Path("code") code: String): ProductResponseEntity
 }

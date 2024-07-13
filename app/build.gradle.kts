@@ -66,7 +66,13 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     implementation(libs.gson)
     implementation(libs.converter.gson)
+    implementation(libs.play.services.mlkit.barcode.scanning)
     annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.accompanist.permissions)
+    implementation(libs.androidx.camera.core)
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.view)
+    implementation(libs.androidx.camera.lifecycle)
 
     kapt(libs.androidx.room.compiler)
     kapt(libs.hilt.android.compiler)

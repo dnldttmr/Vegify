@@ -1,4 +1,4 @@
-package de.lovessushi.vegify.ui.screens.scan
+package de.lovessushi.vegify.ui.screens.search
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,18 +10,12 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class ScanViewModel @Inject constructor(
+class SearchViewModel @Inject constructor(
     private val productRepository: ProductRepository
 ) : ViewModel() {
 
-    private val _state = MutableStateFlow(ScanState())
-    val scanState = _state.asStateFlow()
-
-    init {
-        viewModelScope.launch {
-            getProduct("9006900014858")
-        }
-    }
+    private val _state = MutableStateFlow(SearchScreenState())
+    val searchScreenState = _state.asStateFlow()
 
     fun getProduct(code: String) {
         viewModelScope.launch {
